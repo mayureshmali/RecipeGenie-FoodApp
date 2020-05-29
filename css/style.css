@@ -1,0 +1,531 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0px;
+	font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+	/*background-color: #fff01c;*/
+	background-image: url(../bg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #000000;
+	padding-top: 0px;
+	margin-top: 0px;
+	text-align: center;
+}
+
+body.waiting * {
+	cursor: progress;
+}
+
+.hidden {
+	display: none;
+	transition: 0.1s;
+}
+
+h1 {
+	font-size: 50px;
+	font-family: 'Fredoka One', 'Open Sans', sans-serif;
+}
+
+.page-container {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.banner{
+	color: #000000;
+	font-family: 'Fredoka One', 'Open Sans', sans-serif;
+}
+
+.header {
+	padding-top: 100px;
+    font-size: 40px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.body-paragraphs {
+	color: #000000;
+    padding: 20px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.upload-button-surrogate {
+	background-color: white;
+	color: #2b008f;
+	padding: 5px 80px;
+	text-align: center;
+	font-size: 30px;
+	border: solid 5px #32af6a;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.upload-button-surrogate:hover {
+	background-color: rgb(228, 228, 228);
+	color: #2c9c5f;
+	border: 5px solid #2c9c5f;
+}
+
+.upload-button-surrogate2 {
+	background-color: white;
+	color: #2b008f;
+	padding: 5px 80px;
+	text-align: center;
+	font-size: 30px;
+	border: solid 5px #32af6a;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.upload-button-surrogate2:hover {
+	background-color: rgb(228, 228, 228);
+	color: #2c9c5f;
+	border: 5px solid #2c9c5f;
+}
+
+
+
+.file-input {
+	background-color: #3cbd76;
+    color: #a6e8c5;
+    font-size: 18px;
+    padding: 7px;
+    max-width: 80%;
+    margin-top: 15px;
+	margin-bottom: 20px;
+	position: relative;
+    right: 5000px;
+}
+
+.file-name-display {
+	font-size: 16px;
+	margin-top: 5px;
+}
+
+.button-common {
+	border: none;
+	border-radius: 55px;
+	color: #ffffff;
+    background-color: #32af6a;
+	margin: 20px auto;
+	cursor: pointer;
+	font-family: 'Montserrat';
+	transition: 0.2s;
+}
+
+.button-common:hover {
+	background-color: #0c8341;
+	transition: 0.2s;
+}
+
+.submit-button {
+	padding: 10px 95px;
+    font-size: 25px;
+    font-weight: 600;
+    position: relative;
+    top: -60px;
+}
+
+.submit-button-surrogate {
+	padding: 10px 95px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.loader {
+	animation: spin 2s linear infinite;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 30px;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.nav {
+	background-color: #000000;
+    width: 100%;
+    padding: 0px 5px;
+    display: block;
+    text-align: left;
+    position: fixed;
+    z-index: 100;
+}
+
+.nav-logo {
+	font-family: 'Fredoka One', 'Open Sans', sans-serif;
+    display: inline-block;
+    padding: 5px;
+    margin: 10px 5px;
+    color: white;
+    font-size: 25px;
+}
+
+.nav-restart-button {
+	position: absolute;
+    right: 5px;
+    top: 1px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    margin: 10px 10px 10px 0px;
+    cursor: pointer;
+    color: white;
+    background-color: #5fc5dc;
+    border-radius: 55px;
+    font-family: 'Montserrat';
+    transition: 0.15s;
+}
+
+.nav-restart-button:hover {
+	margin-left: 15px;
+	margin-right: 25px;
+	transition: 0.15s;
+}
+
+.predictions-box {
+	text-align: left;
+	padding: 5px;
+	margin: 5px;
+	margin-bottom: -5px;
+}
+
+.ingredient {
+	font-size: 18px;
+    padding: 5px;
+    margin: 10px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 10px #00000069;
+    position: relative;
+}
+
+.ingredient-label {
+	display: inline;
+}
+
+.delete-button {
+	background-color: #FA80A3;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    margin: 2px;
+    padding: 6px 10px;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    transition: 0.1s;
+}
+
+.delete-button:hover {
+	background-color: #F53068;
+	transition: 0.1s;
+}
+
+.toggle-add-ingredient {
+	background-color: #ffffff;
+    padding: 10px 40px;
+    cursor: pointer;
+    font-weight: 600;
+	font-size: 18px;
+	font-family: 'Montserrat';
+    border: none;
+    border-radius: 55px;
+    color: #32af6a;
+    margin: 0px auto 15px auto;
+    transition: 0.2s;
+}
+
+.grey-out {
+	color: gray;
+	background-color: lightgray;
+}
+
+.toggle-add-ingredient:hover {
+	padding-left: 50px;
+    padding-right: 50px;
+	transition: 0.2s;
+}
+
+.add-ingredient-field {
+	height: 34px;
+    font-size: 18px;
+    border: none;
+    box-shadow: 2px 2px 10px #00000069;
+    padding-top: 0px;
+    padding: 10px;
+    margin: 0px 20px 20px 20px;
+    display: inline-block;
+	width: -webkit-fill-available;
+	width: -moz-available;
+    position: relative;
+}
+
+.add-ingredients-form {
+	transition: 0.1s;
+	position: relative;
+}
+
+.add-ingredient-button {
+	padding: 5px 7px;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 0px;
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+    z-index: 10;
+    border-radius: 0;
+}
+
+.confirm-ingredients-button {
+	padding: 15px 35px;
+    max-width: 80%;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.recipe-results {
+	padding: 15px 25px;
+}
+
+.recipe-card {
+	text-align: left;
+    background-color: white;
+    margin-bottom: 30px;
+    box-shadow: 2px 2px 10px #00000069;
+}
+
+.recipe-card > h2 {
+	font-size: 30px;
+	padding: 0px 40px;
+	margin: 0px;
+}
+
+.recipe-header {
+	position: relative;
+	text-align: center;
+}
+
+.card-ingredient-list {
+	padding: 0px 20px;
+}
+
+.card-ingredient-list > h3 {
+	font-size: 20px;
+    padding: 0px 10px;
+	margin: 0px;
+	margin-top: 10px;
+}
+
+.card-ingredient-list > ul {
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 15px;
+}
+
+.card-ingredient-list > ul > li{
+	padding: 5px;
+    font-size: 18px;
+}
+
+.recipe-name {
+	font-size: 16px;
+    font-weight: 600;
+    margin-top: 5px;
+    color: black;
+    padding: 0px 10px;
+    font-family: 'Montserrat';
+}
+
+.recipe-name > h2 {
+	margin: 0;
+}
+
+.recipe-image {
+	width: 100%;
+    height: 130px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.recipe-image:hover {
+	background-position: top;
+	transition: 0.5s
+}
+
+.recipe-link-button {
+	padding: 10px 30px;
+    font-size: 20px;
+    font-weight: 600;
+	margin-top: 10px;
+}
+
+.no-recipes-message {
+	font-size: 18px;
+}
+
+.retry-button {
+	padding: 17px 50px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+@media only screen and (min-width: 600px) {
+	
+	body {
+		font-size: 26px;
+	}
+
+	.banner {
+		padding-top: 35px;
+	}
+
+	.banner-logo {
+		font-size: 80px;
+	}
+
+	.submit-button {
+		font-size: 8px;
+	}
+
+	.file-input {
+		font-size: 8px;
+	}
+
+	.submit-button-surrogate {
+		font-size: 30px;
+	}
+
+	/* -- Ingredients page styles -- */
+
+	.nav {
+		padding: 5px 15px;
+	}
+
+	.nav-logo {
+		padding: 11px;
+		font-size: 33px;
+	}
+
+	.nav-restart-button {
+		font-size: 25px;
+		padding: 16px;
+		margin-right: 20px;
+	}
+
+	.header {
+		padding-top: 150px;
+		font-size: 60px;
+	}
+
+	.ingredient {
+		font-size: 24px;
+    	padding: 8px;
+    	margin: 15px;
+	}
+
+	.delete-button {
+		font-size: 32px;
+		padding: 6px 12px;
+	}
+
+	.add-ingredient-field {
+		height: 49px;
+		font-size: 24px;
+		margin: 0px 25px 20px 25px;
+	}
+
+	.add-ingredient-button {
+		font-size: 32px;
+		right: 25px;
+	}
+
+	.toggle-add-ingredient {
+		padding: 10px 50px;
+		font-size: 26px;
+	}
+
+	.toggle-add-ingredient:hover {
+		padding-left: 80px;
+		padding-right: 80px;
+	}
+
+	.confirm-ingredients-button {
+		padding: 15px 40px;
+		font-size: 30px;
+	}
+
+	/* -- Recipe page styles -- */
+
+	.recipe-card {
+		position: relative;
+	}
+
+	.recipe-header {
+		text-align: left;
+	}
+
+	.recipe-image {
+		display: inline-block;
+		width: 40%;
+		height: 250px;
+	}
+
+	.recipe-name {
+		display: inline-block;
+		position: absolute;
+		font-size: 18px;
+		width: 59.9%;
+		padding-right: 10px;
+		padding-left: 10px;
+		margin: 10px;
+	}
+
+	.card-ingredient-list {
+		padding: 20px 50px 1px 50px;
+	}
+
+	.card-ingredient-list > h3 {
+		font-size: 24px;
+	}
+
+	.card-ingredient-list > ul {
+		padding-left: 50px;
+		padding-right: 50px;
+		margin-top: 5px;
+	}
+
+	.card-ingredient-list > ul > li{
+		padding: 5px;
+		font-size: 20px;
+	}
+
+	.recipe-link-button {
+		font-size: 25px;
+		padding: 10px 40px;
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 20px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+
+	.banner {
+		padding-top: 80px;
+	}
+}

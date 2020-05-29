@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>RecipeGenie!</title>
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto+Condensed|Pacifico|Coiny|Fredoka+One|Raleway" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
+		integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" 
+		crossorigin="anonymous">
+		<script
+		src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div id="root">
+		</div>
+
+		<!-- Let the common stuff load first, and the index load last so it has access to all the stuff it needs: -->
+		<script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/apiModule.js"></script>
+		<script src="js/imageUpload.js"></script>
+		<script src="js/ingredients.js"></script>
+		<script src="js/recipes.js"></script>
+		<script src="js/store.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+</html>
